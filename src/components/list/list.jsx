@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./list.module.css";
 import CrossButton from "./../../assets/Cross.png";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Card from "./../card/card";
 import Button from "../button/button";
 
@@ -72,31 +72,46 @@ function List() {
   return (
     <div className={styles.container}>
       <div className={styles.fildset}>
-        <select
-          name="employment"
-          className={styles.select}
-          onChange={onChangeFilterHandle}
-          defaultValue=""
-        >
-          <option value="" disabled hidden>
-            Not selected
-          </option>
-          <option value="full">Full time</option>
-          <option value="half">Half time</option>
-          <option value="part">Part time</option>
-        </select>
-        <label htmlFor="Position">Position</label>
-        <input
-          type="text"
-          id="Position"
-          name="jobPosition"
-          placeholder="Unspecified"
-        />
-        <button onClick={onClearHandle}>
-          Clear sorting <img src={CrossButton} alt="" />
+        <div className={styles.fildset__unit}>
+          <label className={styles.fildset__label} htmlFor="Form">
+            Form
+          </label>
+          <select
+            className={
+              filterCondition !== "all"
+                ? styles.select
+                : `${styles.selectGrey} ${styles.select}`
+            }
+            id="Form"
+            name="employment"
+            onChange={onChangeFilterHandle}
+            defaultValue=""
+          >
+            <option value="" disabled hidden>
+              Not selected
+            </option>
+            <option value="full">Full time</option>
+            <option value="half">Half time</option>
+            <option value="part">Part time</option>
+          </select>
+        </div>
+        <div className={styles.fildset__unit}>
+          <label htmlFor="Position" className={styles.fildset__label}>
+            Position
+          </label>
+          <input
+            className={styles.inputField}
+            type="text"
+            id="Position"
+            placeholder="Unspecified"
+          />
+        </div>
+        <button onClick={onClearHandle} className={styles.clearButton}>
+          Clear sorting
+          <img className={styles.closeIcon} src={CrossButton} alt="" />
         </button>
       </div>
-      <ul>
+      <ul className={styles.vacanciesList}>
         {vacanciesArr.items.length > 0 &&
           vacanciesArr.items.map((item, i) => {
             if (filterCondition === "full" && item.schedule.id === "fullDay") {

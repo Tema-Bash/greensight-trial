@@ -5,7 +5,6 @@ function Feedback() {
   const digitsReg = /^\d+$/;
 
   const formatPhone = (event, field) => {
-    // Пустая data ввода не интересует, скорее всего это delete или backspace
     if (!event.data) {
       return;
     }

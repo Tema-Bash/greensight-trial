@@ -1,10 +1,11 @@
 .app {
-  max-width: 1182px;
+  font-family: "Rubik";
+  max-width: 1196px;
   margin: 0 auto;
 }
 
 .heading {
-  font-family: "Rubik";
+  margin: 81px 0 74px 0;
   font-size: 64px;
   font-weight: 400;
   line-height: 76px;

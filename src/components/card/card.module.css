@@ -1,0 +1,50 @@
+.listItem {
+  display: flex;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.listItem_hidden {
+  overflow-y: hidden;
+  max-height: 331px;
+}
+
+.listItem__logo {
+  width: 373px;
+  height: 95px;
+  margin-bottom: 57px;
+}
+
+.listItem__contact {
+  width: 440px;
+  margin: 0;
+}
+
+.listItem__contact:not(:last-of-type) {
+  margin: 0 0 17px 0;
+}
+
+.listItem__description {
+  position: relative;
+}
+
+.addButton {
+  position: absolute;
+  border: none;
+  background-color: #fff;
+  top: 89%;
+  right: 0%;
+  width: 100%;
+  height: 60px;
+  color: #a3a6a9;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) -59.32%,
+    #ffffff 42.84%
+  );
+}
+
+.addButton:hover {
+  color: #47494b;
+  cursor: pointer;
+}

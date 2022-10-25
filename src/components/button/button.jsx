@@ -8,7 +8,7 @@ function Button({ text, extraClass, type = "button", ...rest }) {
       type={type}
       {...rest}
     >
-      <p className={styles.button__text}>{text}</p>
+      <p className={styles.text}>{text}</p>
     </button>
   );
 }

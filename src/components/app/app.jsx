@@ -17,7 +17,6 @@ function App() {
   useEffect(() => {
     if (vacanciesArr) {
       setIsLoading(false);
-      //console.log(vacanciesArr);
     }
   }, [vacanciesArr]);
 
