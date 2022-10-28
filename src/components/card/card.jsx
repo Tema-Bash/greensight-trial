@@ -23,19 +23,27 @@ function Card({ data }) {
           ></img>
         )}
         <p className={styles.listItem__contact}>
-          <span className={styles.listItem__contact_color_grey}>Form: </span>
+          <span className={`${styles.listItem__contact} ${styles.colorGrey}`}>
+            Form:{" "}
+          </span>
           {data.schedule.id}
         </p>
         <p className={styles.listItem__contact}>
-          <span className={styles.listItem__contact_color_grey}>Company: </span>
+          <span className={`${styles.listItem__contact} ${styles.colorGrey}`}>
+            Company:{" "}
+          </span>
           {data.employer.name}
         </p>
         <p className={styles.listItem__contact}>
-          <span className={styles.listItem__contact_color_grey}>Web: </span>
+          <span className={`${styles.listItem__contact} ${styles.colorGrey}`}>
+            Web:{" "}
+          </span>
           {data.alternate_url}
         </p>
         <p className={styles.listItem__contact}>
-          <span className={styles.listItem__contact_color_grey}>Address: </span>
+          <span className={`${styles.listItem__contact} ${styles.colorGrey}`}>
+            Address:{" "}
+          </span>
           {data?.address !== null ? data?.address.city : "none"}
         </p>
       </div>

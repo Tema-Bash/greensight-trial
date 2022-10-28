@@ -1,6 +1,7 @@
 .fildset {
   display: flex;
   margin-bottom: 32px;
+  padding: 6px 0 7px 0;
 }
 
 .fildset__label {
@@ -14,6 +15,7 @@
 .select {
   border: none;
   border-bottom: 1px solid black;
+  font-family: Rubik;
   height: 37px;
   outline: none;
   font-size: 16px;
@@ -21,6 +23,8 @@
   line-height: 26px;
   letter-spacing: 0em;
   text-align: left;
+  appearance: none;
+  background: url(./../../assets/arrow.png) no-repeat right;
 }
 
 .select option {
@@ -41,6 +45,7 @@
 .inputField {
   border: none;
   border-bottom: 1px solid black;
+  font-family: Rubik;
   height: 37px;
   outline: none;
   font-size: 16px;
@@ -55,6 +60,8 @@
 }
 
 .clearButton {
+  padding: 0;
+  margin-bottom: 10px;
   margin-left: auto;
   align-self: flex-end;
   border: none;

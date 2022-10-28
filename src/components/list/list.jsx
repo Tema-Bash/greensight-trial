@@ -79,6 +79,7 @@ function List() {
           <label className={styles.fildset__label} htmlFor="form-select">
             Form
           </label>
+
           <select
             className={
               filterCondition !== "all"
@@ -109,7 +110,7 @@ function List() {
             placeholder="Unspecified"
           />
         </div>
-        <button onClick={onClearHandle} className={styles.clearButton}>
+        <button className={styles.clearButton} onClick={onClearHandle}>
           Clear sorting
           <img className={styles.closeIcon} src={CrossButton} alt="" />
         </button>

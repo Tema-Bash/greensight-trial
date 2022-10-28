@@ -1,5 +1,6 @@
 .listItem {
   display: flex;
+  gap: 20px;
   border: 1px solid black;
   padding: 20px;
 }
@@ -11,14 +12,24 @@
 }
 
 .listItem__logo {
-  height: 95px;
-  margin-bottom: 57px;
+  max-width: 446px;
+  max-height: 126px;
+  margin-bottom: 21px;
   object-fit: contain;
 }
 
 .listItem__contact {
   width: 440px;
   margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.colorGrey {
+  color: #545454;
 }
 
 .listItem__contact:not(:last-of-type) {
