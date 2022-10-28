@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../button/button";
+import styles from "./feedback.module.css";
 
 function Feedback() {
-  const digitsReg = /^\d+$/;
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [comment, setComment] = useState("");
 
-  const formatPhone = (event, field) => {
-    if (!event.data) {
+  const digitsReg = /^\d+$/;
+  const formatPhone = (event) => {
+    if (!event.nativeEvent.data) {
       return;
     }
 
-    const digits = field.value.split("").filter((s) => digitsReg.test(s));
-
+    const digits = event.target.value
+      .split("")
+      .filter((str) => digitsReg.test(str));
     let formatted = "+";
 
     digits.forEach((digit, idx) => {
@@ -21,95 +27,126 @@ function Feedback() {
       formatted += digit;
 
       if (idx === 0) {
-        formatted += " (";
+        formatted += "(";
       }
       if (idx === 3) {
-        formatted += ") ";
+        formatted += ")";
       }
       if (idx === 6 || idx === 8) {
         formatted += "-";
       }
     });
 
-    field.value = formatted;
+    event.target.value = formatted;
+    setPhone(formatted);
   };
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert(
+      `Name: ${name}\nEmail: ${email}\nPhone number: ${phone}\nComment: ${comment}`
+    );
+  }
+
   return (
-    <div>
-      <div className="column1">
-        <h2>Leave a request</h2>
-        <form action="">
-          <div className="form__unit">
-            <label className="form__label" htmlFor="cafe-name">
+    <div className={styles.container}>
+      <div className={styles.requestForm}>
+        <h2 className={styles.title}>Leave a request</h2>
+        <form
+          className={styles.form}
+          id="requestForm"
+          action=""
+          onSubmit={handleSubmit}
+        >
+          <div className={styles.unit}>
+            <label className={styles.label} htmlFor="name">
               Your name
             </label>
             <input
-              className="form__field"
-              id="cafe-name"
+              className={styles.inputField}
+              id="name"
               type="text"
-              name="cafe-name"
+              name="name"
               placeholder="Please introduce yourself"
-              value=""
+              onInput={(event) => setName(event.target.value)}
+              defaultValue={name}
+              required
             />
           </div>
-
-          <div className="form__unit">
-            <label className="form__label" htmlFor="cafe-address">
+          <div className={styles.unit}>
+            <label className={styles.label} htmlFor="email">
               Email
             </label>
             <input
-              className="form__field"
-              id="cafe-address"
-              name="cafe-address"
+              className={styles.inputField}
+              id="email"
+              name="email"
               type="email"
               placeholder="ivanov@mail.ru"
-              value=""
+              defaultValue={email}
+              onInput={(event) => setEmail(event.target.value)}
+              required
             />
           </div>
-
-          <div className="form__unit">
-            <label className="form__label" htmlFor="contact-number">
+          <div className={styles.unit}>
+            <label className={styles.label} htmlFor="contact-number">
               Phone number
             </label>
             <input
-              className="form__field"
+              className={styles.inputField}
               id="contact-number"
               name="contact-number"
+              pattern="\+7\(\d{3}\)\d{3}[-]\d{2}[-]\d{2}"
               type="tel"
-              value="+7 ("
-              //oninput={formatPhone(event, this)}
+              defaultValue={phone}
+              onInput={(event) => formatPhone(event)}
               placeholder="+7(999)123-45-78"
+              required
             />
           </div>
-          <div className="form__unit">
-            <label className="form__label" htmlFor="comment">
+          <div className={styles.unit}>
+            <label className={styles.label} htmlFor="comment">
               Comment
             </label>
             <input
-              className="form__field"
+              className={styles.inputField}
               id="comment"
-              name="cafe-address"
+              name="comment"
               type="text"
               placeholder="Message text"
-              value=""
+              defaultValue={comment}
+              onInput={(event) => setComment(event.target.value)}
             />
           </div>
         </form>
-        <Button text={"Send"} type="submit" />
-        <p>
+        <Button
+          text="Send"
+          form="requestForm"
+          type="submit"
+          extraClass={styles.submitButton}
+        />
+        <p className={styles.agreementText}>
           By clicking "Send" you confirm your consent to the
-          <span> processing of personal data</span>
+          <span className={styles.underline}> processing of personal data</span>
         </p>
       </div>
-      <div className="column2">
-        <p>We will advise you and help you start a new project</p>
-        <div>
-          <p>+7 499 391-66-69</p>
-          <p>mail@greensight.ru</p>
+      <div className={styles.contacts}>
+        <p className={styles.text}>
+          We will advise you and help you start a new project
+        </p>
+        <div className={styles.greensightContacts}>
+          <p className={`${styles.text} ${styles.textBold}`}>
+            +7 499 391-66-69
+          </p>
+          <p className={`${styles.text} ${styles.textBold}`}>
+            mail@greensight.ru
+          </p>
         </div>
         <div>
-          <p>Moscow, Zelenograd, Central Ave., bldg. 305, 3rd floor</p>
-          <p>How to get there?</p>
+          <p className={styles.text}>
+            Moscow, Zelenograd, Central Ave., bldg. 305, 3rd floor
+          </p>
+          <p className={styles.text}>How to get there?</p>
         </div>
       </div>
     </div>

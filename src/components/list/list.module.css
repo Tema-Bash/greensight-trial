@@ -85,3 +85,7 @@
   flex-direction: column;
   gap: 24px;
 }
+
+.showMoreButton {
+  margin: 21px 0;
+}

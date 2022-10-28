@@ -57,6 +57,7 @@ function List() {
         }
         break;
       default:
+        setShowMoreVisible(true);
         break;
     }
   }
@@ -67,13 +68,15 @@ function List() {
 
   function onClearHandle() {
     setFilterCondition("all");
+    setItemsLimit(5);
+    counter = 0;
   }
 
   return (
     <div className={styles.container}>
       <div className={styles.fildset}>
         <div className={styles.fildset__unit}>
-          <label className={styles.fildset__label} htmlFor="Form">
+          <label className={styles.fildset__label} htmlFor="form-select">
             Form
           </label>
           <select
@@ -82,12 +85,12 @@ function List() {
                 ? styles.select
                 : `${styles.selectGrey} ${styles.select}`
             }
-            id="Form"
+            id="form-select"
             name="employment"
             onChange={onChangeFilterHandle}
-            defaultValue=""
+            value={filterCondition}
           >
-            <option value="" disabled hidden>
+            <option value="all" disabled hidden>
               Not selected
             </option>
             <option value="full">Full time</option>
@@ -141,7 +144,11 @@ function List() {
           })}
       </ul>
       {showMoreVisible && (
-        <Button text={"Show more"} onClick={showMoreHandler} />
+        <Button
+          text={"Show more"}
+          onClick={showMoreHandler}
+          extraClass={styles.showMoreButton}
+        />
       )}
     </div>
   );

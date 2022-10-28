@@ -39,24 +39,28 @@ function Card({ data }) {
           {data?.address !== null ? data?.address.city : "none"}
         </p>
       </div>
+
       <div className={styles.listItem__description}>
-        <p>{data.name}</p>
-        <p>
+        <p className={styles.vacanciesTitle}>{data.name}</p>
+        <p className={styles.vacanciesText}>
+          {data.snippet.requirement}
           {data.snippet.requirement}
           {data.snippet.requirement}
           {data.snippet.requirement}
           {data.snippet.requirement}
         </p>
-        <p>
+        <p className={styles.vacanciesText}>
           {data.snippet.responsibility}
           {data.snippet.responsibility}
           {data.snippet.responsibility}
           {data.snippet.responsibility}
           {data.snippet.responsibility}
         </p>
-        <button className={styles.addButton} onClick={moreDetailsHandler}>
-          {" "}
-          more details
+        <button
+          className={`${styles.addButton} ${open && styles.addButton_opened}`}
+          onClick={moreDetailsHandler}
+        >
+          {!open ? `more details` : `close`}
         </button>
       </div>
     </li>
