@@ -5,11 +5,7 @@ function Card({ data }) {
   const [open, setOpen] = useState(false)
 
   function moreDetailsHandler() {
-    if (open) {
-      setOpen(false)
-    } else {
-      setOpen(true)
-    }
+    open ? setOpen(false) : setOpen(true)
   }
 
   return (
