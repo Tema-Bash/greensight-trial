@@ -4,7 +4,7 @@
   padding: 6px 0 7px 0;
 }
 
-.fildset__label {
+.label {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
@@ -17,6 +17,7 @@
   border-bottom: 1px solid black;
   font-family: Rubik;
   height: 37px;
+  margin-top: 4px;
   outline: none;
   font-size: 16px;
   font-weight: 400;
@@ -35,7 +36,7 @@
   color: #a3a6a9;
 }
 
-.fildset__unit {
+.unit {
   display: flex;
   width: 38.96%;
   flex-direction: column;
@@ -87,12 +88,46 @@
 .vacanciesList {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 21px 0;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
 .showMoreButton {
-  margin: 21px 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .fildset {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .unit {
+    width: 100%;
+  }
+
+  .clearButton {
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  .vacanciesList {
+    margin-bottom: 8px;
+    gap: 18px;
+  }
+
+  .select {
+    margin-top: 0;
+  }
+
+  .clearButton {
+    margin-top: 4px;
+  }
+
+  .fildset {
+    gap: 16px;
+    padding-bottom: 0;
+  }
 }

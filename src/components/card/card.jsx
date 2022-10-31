@@ -1,54 +1,54 @@
-import React, { useState } from "react";
-import styles from "./card.module.css";
+import React, { useState } from 'react'
+import styles from './card.module.css'
 
 function Card({ data }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   function moreDetailsHandler() {
     if (open) {
-      setOpen(false);
+      setOpen(false)
     } else {
-      setOpen(true);
+      setOpen(true)
     }
   }
 
   return (
     <li className={`${styles.listItem} ${!open && styles.listItem_hidden}`}>
-      <div className={styles.listItem__contacts}>
-        {data?.employer.logo_urls !== null && (
-          <img
-            className={styles.listItem__logo}
-            src={data.employer.logo_urls.original}
-            alt="vacancies logo"
-          ></img>
-        )}
-        <p className={styles.listItem__contact}>
-          <span className={`${styles.listItem__contact} ${styles.colorGrey}`}>
-            Form:{" "}
+      <div className={styles.contacts}>
+        <div className={styles.logoContainer}>
+          {data?.employer.logo_urls !== null && (
+            <img
+              className={styles.logo}
+              src={data.employer.logo_urls.original}
+              alt='vacancies logo'
+            ></img>
+          )}
+        </div>
+        <p className={styles.contact}>
+          <span className={`${styles.contact} ${styles.colorGrey}`}>
+            Form:{' '}
           </span>
           {data.schedule.id}
         </p>
-        <p className={styles.listItem__contact}>
-          <span className={`${styles.listItem__contact} ${styles.colorGrey}`}>
-            Company:{" "}
+        <p className={styles.contact}>
+          <span className={`${styles.contact} ${styles.colorGrey}`}>
+            Company:{' '}
           </span>
           {data.employer.name}
         </p>
-        <p className={styles.listItem__contact}>
-          <span className={`${styles.listItem__contact} ${styles.colorGrey}`}>
-            Web:{" "}
-          </span>
+        <p className={styles.contact}>
+          <span className={`${styles.contact} ${styles.colorGrey}`}>Web: </span>
           {data.alternate_url}
         </p>
-        <p className={styles.listItem__contact}>
-          <span className={`${styles.listItem__contact} ${styles.colorGrey}`}>
-            Address:{" "}
+        <p className={styles.contact}>
+          <span className={`${styles.contact} ${styles.colorGrey}`}>
+            Address:{' '}
           </span>
-          {data?.address !== null ? data?.address.city : "none"}
+          {data?.address !== null ? data?.address.city : 'none'}
         </p>
       </div>
 
-      <div className={styles.listItem__description}>
+      <div className={styles.description}>
         <p className={styles.vacanciesTitle}>{data.name}</p>
         <p className={styles.vacanciesText}>
           {data.snippet.requirement}
@@ -72,7 +72,7 @@ function Card({ data }) {
         </button>
       </div>
     </li>
-  );
+  )
 }
 
-export default Card;
+export default Card
