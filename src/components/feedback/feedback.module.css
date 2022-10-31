@@ -121,6 +121,7 @@
 
   .container {
     flex-direction: column;
+    margin-bottom: 94px;
   }
 
   .form {
