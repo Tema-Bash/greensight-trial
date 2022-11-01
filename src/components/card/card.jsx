@@ -15,7 +15,7 @@ function Card({ data }) {
           {data?.employer.logo_urls !== null && (
             <img
               className={styles.logo}
-              src={data.employer.logo_urls.original}
+              src={data.employer.logo_urls?.original}
               alt='vacancies logo'
             ></img>
           )}

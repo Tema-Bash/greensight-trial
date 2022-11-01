@@ -10,7 +10,6 @@ function List() {
   const [itemsLimit, setItemsLimit] = useState(5)
   const [filterCondition, setFilterCondition] = useState('all')
   const [showMoreVisible, setShowMoreVisible] = useState(true)
-
   let counter = 0
   let FullArrlength = 0
   let halfArrlength = 0
