@@ -4,15 +4,15 @@ $width-mob: 768px;
     &__container {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 164px;
+        margin-bottom: $gutter-step*41;
         @media screen and (max-width: $width-mob) {
             flex-direction: column;
-            margin-bottom: 94px;
+            margin-bottom: $gutter-step*24;
         }
     }
 
     &__title {
-        margin: 21px 0 0;
+        margin: $gutter-step*5 0 0;
         font-size: 64px;
         font-weight: 400;
         line-height: 76px;
@@ -22,7 +22,7 @@ $width-mob: 768px;
         @media screen and (max-width: $width-mob) {
             font-size: 32px;
             line-height: 38px;
-            margin-top: 8px;
+            margin-top: $gutter-step*2;
         }
     }
 
@@ -31,15 +31,15 @@ $width-mob: 768px;
     }
 
     &__form {
-        margin-right: 20px;
-        margin-top: 74px;
+        margin-right: $gutter-step*5;
+        margin-top: $gutter-step*18;
         display: flex;
         flex-direction: column;
-        gap: 32px;
-        max-width: 438px;
+        gap: $gutter-step*8;
+        max-width: $gutter-step*109;
 
         @media screen and (max-width: $width-mob) {
-            margin-top: 32px;
+            margin-top: $gutter-step*8;
             margin-right: 0;
         }
     }
@@ -61,7 +61,7 @@ $width-mob: 768px;
         border: none;
         padding: 0;
         border-bottom: 1px solid #000;
-        height: 37px;
+        height: $gutter-step*9;
         outline: none;
         font-family: var(--font-basic);
         font-size: 16px;
@@ -75,16 +75,16 @@ $width-mob: 768px;
     }
 
     &__submitButton {
-        margin: 32px 0 43px;
+        margin: $gutter-step*8 0 $gutter-step*11;
 
         @media screen and (max-width: $width-mob) {
-            margin-top: 35px;
+            margin-top: $gutter-step*9;
         }
     }
 
     &__agreementText {
         margin: 0;
-        max-width: 389px;
+        max-width: $gutter-step*97;
         font-size: 14px;
         font-weight: 400;
         line-height: 22px;
@@ -100,12 +100,12 @@ $width-mob: 768px;
 
     &__contacts {
         width: 100%;
-        max-width: 451px;
-        margin-right: 10px;
-        margin-top: 74px;
+        max-width: $gutter-step*113;
+        margin-right: $gutter-step*3;
+        margin-top: $gutter-step*19;
         display: flex;
         flex-direction: column;
-        gap: 82px;
+        gap: $gutter-step*20;
         font-size: 18px;
         font-weight: 400;
         line-height: 29px;
@@ -113,14 +113,14 @@ $width-mob: 768px;
         text-align: left;
 
         @media screen and (max-width: $width-mob) {
-            margin-top: 32px;
-            gap: 35px;
+            margin-top: $gutter-step*8;
+            gap: $gutter-step*9;
         }
     }
 
     &__text {
         margin: 0;
-        max-width: 319px;
+        max-width: $gutter-step*20;
 
         &_style_bold {
             font-size: 32px;
@@ -136,10 +136,10 @@ $width-mob: 768px;
     &__greensightContacts {
         display: flex;
         flex-direction: column;
-        gap: 26px;
+        gap: $gutter-step*7;
 
         @media screen and (max-width: $width-mob) {
-            gap: 19px;
+            gap: $gutter-step*5;
         }
     }
 
@@ -147,7 +147,7 @@ $width-mob: 768px;
         font-size: 16px;
 
         @media screen and (max-width: $width-mob) {
-            margin-top: 13px;
+            margin-top: $gutter-step*3;
         }
     }
 }

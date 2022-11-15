@@ -1,11 +1,13 @@
+$gutter-step: 4px;
+
 .app {
     font-family: var(--font-basic);
-    max-width: 1196px;
+    max-width: $gutter-step * 299;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 $gutter-step * 5;
 
     &__heading {
-        margin: 81px 0 74px 0;
+        margin: $gutter-step * 20 0 $gutter-step * 18 0;
         font-size: 64px;
         font-weight: 400;
         line-height: 76px;
@@ -15,11 +17,11 @@
 
     @media screen and (max-width: 768px) {
         & {
-            padding: 0 24px;
+            padding: 0 $gutter-step * 6;
         }
 
         &__heading {
-            margin-bottom: 32px;
+            margin-bottom: $gutter-step * 8;
             font-size: 32px;
             line-height: 38px;
         }
