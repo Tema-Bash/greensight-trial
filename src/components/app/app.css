@@ -1,11 +1,10 @@
 .app {
-  font-family: 'Rubik';
+  font-family: var(--font-basic);
   max-width: 1196px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
-.heading {
+.app__heading {
   margin: 81px 0 74px 0;
   font-size: 64px;
   font-weight: 400;
@@ -13,13 +12,11 @@
   letter-spacing: 0em;
   text-align: left;
 }
-
 @media screen and (max-width: 768px) {
   .app {
     padding: 0 24px;
   }
-
-  .heading {
+  .app__heading {
     margin-bottom: 32px;
     font-size: 32px;
     line-height: 38px;

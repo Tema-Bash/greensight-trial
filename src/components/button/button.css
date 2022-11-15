@@ -7,14 +7,12 @@
   padding: 0;
   border: none;
 }
-
 .button:hover {
   cursor: pointer;
 }
-
-.text {
+.button__text {
   margin: 11px 0 11px;
-  font-family: Rubik;
+  font-family: var(--font-basic);
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;

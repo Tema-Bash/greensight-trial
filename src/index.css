@@ -1,4 +1,15 @@
-body {
-  padding: 0;
-  margin: 0;
+/* consts */
+:root {
+    --font-basic: "rubik";
+    --font-inform: "roboto";
+    --grey-color: #a3a6a9;
 }
+
+/* vendor */
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);
+@import url(./components/app/app.css);
+@import url(./components/list/list.css);
+@import url(./components/feedback/feedback.css);
+@import url(./components/card/card.css);
+@import url(./components/button/button.css);

@@ -1,35 +1,48 @@
-.listItem {
+.card {
   display: flex;
   gap: 20px;
   border: 1px solid black;
   padding: 20px;
 }
-
-.listItem_hidden {
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+}
+.card_visibility_hidden {
   overflow-y: hidden;
   max-height: 331px;
   box-sizing: border-box;
 }
-
-.logoContainer {
+@media screen and (max-width: 768px) {
+  .card_visibility_hidden {
+    max-height: 728px;
+  }
+}
+.card__logoContainer {
   width: 100%;
   max-width: 446px;
   height: 126px;
   margin-bottom: 26px;
 }
-
-.logo {
+@media screen and (max-width: 768px) {
+  .card__logoContainer {
+    max-width: 232px;
+    height: 81px;
+    margin-bottom: 16px;
+  }
+}
+.card__logo {
   max-width: 100%;
   max-height: 95px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-
-.contacts {
+.card__contacts {
   width: 38%;
   flex-shrink: 0;
 }
-
-.contact {
+.card__contact {
   max-width: 440px;
   margin: 0;
   white-space: nowrap;
@@ -41,35 +54,41 @@
   letter-spacing: 0em;
   text-align: left;
 }
-
-.colorGrey {
+@media screen and (max-width: 768px) {
+  .card__contact {
+    width: 100%;
+  }
+}
+.card__contact_color_grey {
   color: #545454;
 }
-
-.contact:not(:last-of-type) {
+.card__contact:not(:last-of-type) {
   margin: 0 0 17px 0;
 }
-
-.description {
+.card__description {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding-bottom: 27px;
 }
-
-.vacanciesTitle {
+.card__vacanciesTitle {
   margin: 0;
-  font-family: Roboto;
+  font-family: var(--font-inform);
   font-size: 32px;
   font-weight: 400;
   line-height: 51px;
   letter-spacing: 0em;
   text-align: left;
 }
-
-.vacanciesText {
-  font-family: Roboto;
+@media screen and (max-width: 768px) {
+  .card__vacanciesTitle {
+    font-size: 22px;
+    line-height: 35px;
+  }
+}
+.card__vacanciesText {
+  font-family: var(--font-inform);
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -78,9 +97,8 @@
   margin: 0;
   word-wrap: break-word;
 }
-
-.addButton {
-  font-family: Roboto;
+.card__addButton {
+  font-family: var(--font-inform);
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -94,52 +112,23 @@
   right: 0%;
   width: 100%;
   height: 80px;
-  color: #a3a6a9;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) -59.32%,
-    #ffffff 42.84%
-  );
+  color: var(--grey-color);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) -59.32%, #ffffff 42.84%);
 }
-
-.addButton_opened {
-  background: none;
+@media screen and (max-width: 768px) {
+  .card__addButton {
+    top: 370px;
+  }
 }
-
-.addButton:hover {
+.card__addButton:hover {
   color: #47494b;
   cursor: pointer;
 }
-
+.card__addButton_opened {
+  background: none;
+}
 @media screen and (max-width: 768px) {
-  .listItem {
-    flex-direction: column;
-  }
-
-  .logoContainer {
-    max-width: 232px;
-    height: 81px;
-    margin-bottom: 16px;
-  }
-
-  .contacts {
-    width: 100%;
-  }
-
-  .vacanciesTitle {
-    font-size: 22px;
-    line-height: 35px;
-  }
-
-  .listItem_hidden {
-    max-height: 728px;
-  }
-
-  .addButton {
-    top: 370px;
-  }
-
-  .addButton_opened {
+  .card__addButton_opened {
     top: auto;
     bottom: -20px;
   }
