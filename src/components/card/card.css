@@ -9,24 +9,24 @@
     flex-direction: column;
   }
 }
-.card_visibility_hidden {
+.card--hidden {
   overflow-y: hidden;
   max-height: 332px;
   box-sizing: border-box;
 }
 @media screen and (max-width: 768px) {
-  .card_visibility_hidden {
+  .card--hidden {
     max-height: 728px;
   }
 }
-.card__logoContainer {
+.card--logo-container {
   width: 100%;
   max-width: 444px;
   height: 124px;
   margin-bottom: 28px;
 }
 @media screen and (max-width: 768px) {
-  .card__logoContainer {
+  .card--logo-container {
     max-width: 232px;
     height: 80px;
     margin-bottom: 16px;
@@ -42,6 +42,11 @@
   width: 38%;
   flex-shrink: 0;
 }
+@media screen and (max-width: 768px) {
+  .card__contacts {
+    width: 100%;
+  }
+}
 .card__contact {
   max-width: 440px;
   margin: 0;
@@ -54,12 +59,7 @@
   letter-spacing: 0em;
   text-align: left;
 }
-@media screen and (max-width: 768px) {
-  .card__contact {
-    width: 100%;
-  }
-}
-.card__contact_color_grey {
+.card__contact--grey {
   color: #545454;
 }
 .card__contact:not(:last-of-type) {
@@ -72,7 +72,7 @@
   gap: 8px;
   padding-bottom: 28px;
 }
-.card__vacanciesTitle {
+.card__vacancies-title {
   margin: 0;
   font-family: var(--font-inform);
   font-size: 32px;
@@ -82,12 +82,12 @@
   text-align: left;
 }
 @media screen and (max-width: 768px) {
-  .card__vacanciesTitle {
+  .card__vacancies-title {
     font-size: 22px;
     line-height: 35px;
   }
 }
-.card__vacanciesText {
+.card__vacancies-text {
   font-family: var(--font-inform);
   font-size: 16px;
   font-weight: 400;
@@ -97,7 +97,7 @@
   margin: 0;
   word-wrap: break-word;
 }
-.card__addButton {
+.card__add-button {
   font-family: var(--font-inform);
   font-size: 16px;
   font-weight: 400;
@@ -116,20 +116,20 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) -59.32%, #ffffff 42.84%);
 }
 @media screen and (max-width: 768px) {
-  .card__addButton {
+  .card__add-button {
     top: 372px;
   }
 }
-.card__addButton:hover {
-  color: #47494b;
-  cursor: pointer;
-}
-.card__addButton_opened {
+.card__add-button--opened {
   background: none;
 }
 @media screen and (max-width: 768px) {
-  .card__addButton_opened {
+  .card__add-button--opened {
     top: auto;
     bottom: -20px;
   }
+}
+.card__add-button:hover {
+  color: #47494b;
+  cursor: pointer;
 }

@@ -1,13 +1,14 @@
 /* consts */
 :root {
-    --font-basic: "rubik";
-    --font-inform: "roboto";
-    --grey-color: #a3a6a9;
+  --font-basic: "rubik";
+  --font-inform: "roboto";
+  --grey-color: #a3a6a9;
 }
 
 /* vendor */
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts/fonts.css);
+/* main */
 @import url(./components/app/app.css);
 @import url(./components/list/list.css);
 @import url(./components/feedback/feedback.css);

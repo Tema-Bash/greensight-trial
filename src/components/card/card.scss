@@ -11,7 +11,7 @@ $gutter-step: 4px;
         flex-direction: column;
     }
 
-    &_visibility_hidden {
+    &--hidden {
         overflow-y: hidden;
         max-height: $gutter-step * 83;
         box-sizing: border-box;
@@ -21,7 +21,7 @@ $gutter-step: 4px;
         }
     }
 
-    &__logoContainer {
+    &--logo-container {
         width: 100%;
         max-width: $gutter-step * 111;
         height: $gutter-step * 31;
@@ -43,6 +43,10 @@ $gutter-step: 4px;
     &__contacts {
         width: 38%;
         flex-shrink: 0;
+
+        @media screen and (max-width: $width-mob) {
+            width: 100%;
+        }
     }
 
     &__contact {
@@ -57,11 +61,7 @@ $gutter-step: 4px;
         letter-spacing: 0em;
         text-align: left;
 
-        @media screen and (max-width: $width-mob) {
-            width: 100%;
-        }
-
-        &_color_grey {
+        &--grey {
             color: #545454;
         }
 
@@ -78,7 +78,7 @@ $gutter-step: 4px;
         padding-bottom: $gutter-step * 7;
     }
 
-    &__vacanciesTitle {
+    &__vacancies-title {
         margin: 0;
         font-family: var(--font-inform);
         font-size: 32px;
@@ -93,7 +93,7 @@ $gutter-step: 4px;
         }
     }
 
-    &__vacanciesText {
+    &__vacancies-text {
         font-family: var(--font-inform);
         font-size: 16px;
         font-weight: 400;
@@ -104,7 +104,7 @@ $gutter-step: 4px;
         word-wrap: break-word;
     }
 
-    &__addButton {
+    &__add-button {
         font-family: var(--font-inform);
         font-size: 16px;
         font-weight: 400;
@@ -115,7 +115,7 @@ $gutter-step: 4px;
         padding-top: $gutter-step * 7;
         border: none;
         background-color: #fff;
-        bottom: -$gutter-step * 5;
+        bottom: $gutter-step * -5;
         right: 0%;
         width: 100%;
         height: $gutter-step * 20;
@@ -130,17 +130,17 @@ $gutter-step: 4px;
             top: $gutter-step * 93;
         }
 
+        &--opened {
+            background: none;
+            @media screen and (max-width: $width-mob) {
+                top: auto;
+                bottom: $gutter-step * -5;
+            }
+        }
+
         &:hover {
             color: #47494b;
             cursor: pointer;
-        }
-    }
-
-    &__addButton_opened {
-        background: none;
-        @media screen and (max-width: $width-mob) {
-            top: auto;
-            bottom: -$gutter-step * 5;
         }
     }
 }

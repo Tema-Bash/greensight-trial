@@ -81,7 +81,7 @@ function List() {
                         className={
                             filterCondition !== "all"
                                 ? "list__select"
-                                : "list__select list__select_color_grey"
+                                : "list__select list__select--grey"
                         }
                         id="form-select"
                         name="employment"
@@ -101,18 +101,22 @@ function List() {
                         Position
                     </label>
                     <input
-                        className="list__inputField"
+                        className="list__input-field"
                         type="text"
                         id="Position"
                         placeholder="Unspecified"
                     />
                 </div>
-                <button className="list__clearButton" onClick={onClearHandle}>
+                <button className="list__clear-button" onClick={onClearHandle}>
                     Clear sorting
-                    <img className="list__closeIcon" src={CrossButton} alt="" />
+                    <img
+                        className="list__close-icon"
+                        src={CrossButton}
+                        alt=""
+                    />
                 </button>
             </div>
-            <ul className="list__vacanciesList">
+            <ul className="list__vacancies-list">
                 {vacanciesArr.items.length > 0 &&
                     vacanciesArr.items.map((item, i) => {
                         if (
@@ -154,7 +158,7 @@ function List() {
                 <Button
                     text={"Show more"}
                     onClick={showMoreHandler}
-                    extraClass="list__showMoreButton"
+                    extraClass="list__show-more-button"
                 />
             )}
         </div>

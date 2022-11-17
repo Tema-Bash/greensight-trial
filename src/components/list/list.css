@@ -8,7 +8,7 @@
 .list__fildset {
   display: flex;
   margin-bottom: 32px;
-  padding: 6px 0 7px 0;
+  padding: 4px 0 8px 0;
 }
 @media screen and (max-width: 768px) {
   .list__fildset {
@@ -21,7 +21,7 @@
   border: none;
   border-bottom: 1px solid black;
   font-family: var(--font-basic);
-  height: 37px;
+  height: 36px;
   margin-top: 4px;
   outline: none;
   font-size: 16px;
@@ -34,7 +34,7 @@
           appearance: none;
   background: url(./../../img/svg/triangle.svg) no-repeat right;
 }
-.list__select_color_grey {
+.list__select--grey {
   color: var(--grey-color);
 }
 @media screen and (max-width: 768px) {
@@ -49,18 +49,18 @@
   display: flex;
   width: 38.96%;
   flex-direction: column;
-  margin-right: 19px;
+  margin-right: 20px;
 }
 @media screen and (max-width: 768px) {
   .list__unit {
     width: 100%;
   }
 }
-.list__inputField {
+.list__input-field {
   border: none;
   border-bottom: 1px solid #000;
   font-family: var(--font-basic);
-  height: 37px;
+  height: 36px;
   outline: none;
   font-size: 16px;
   font-weight: 400;
@@ -68,18 +68,18 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.list__inputField::-moz-placeholder {
+.list__input-field::-moz-placeholder {
   color: var(--grey-color);
 }
-.list__inputField:-ms-input-placeholder {
+.list__input-field:-ms-input-placeholder {
   color: var(--grey-color);
 }
-.list__inputField::placeholder {
+.list__input-field::placeholder {
   color: var(--grey-color);
 }
-.list__clearButton {
+.list__clear-button {
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   margin-left: auto;
   align-self: flex-end;
   border: none;
@@ -92,34 +92,34 @@
   letter-spacing: 0em;
   text-align: right;
 }
-.list__clearButton:hover {
+.list__clear-button:hover {
   color: #47494b;
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
-  .list__clearButton {
+  .list__clear-button {
     margin: 0;
     align-self: flex-start;
     margin-top: 4px;
   }
 }
-.list__closeIcon {
+.list__close-icon {
   margin-left: 12px;
 }
-.list__vacanciesList {
+.list__vacancies-list {
   list-style-type: none;
   padding: 0;
-  margin: 0 0 21px 0;
+  margin: 0 0 20px 0;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 @media screen and (max-width: 768px) {
-  .list__vacanciesList {
+  .list__vacancies-list {
     margin-bottom: 8px;
-    gap: 18px;
+    gap: 20px;
   }
 }
-.list__showMoreButton {
+.list__show-more-button {
   margin: 0;
 }

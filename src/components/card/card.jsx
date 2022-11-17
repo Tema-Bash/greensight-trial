@@ -8,9 +8,9 @@ function Card({ data }) {
     }
 
     return (
-        <li className={`card ${!open && "card_visibility_hidden"}`}>
+        <li className={`card ${!open && "card--hidden"}`}>
             <div className="card__contacts">
-                <div className="card__logoContainer">
+                <div className="card__logo-container">
                     {data?.employer.logo_urls !== null && (
                         <img
                             className="card__logo"
@@ -20,25 +20,25 @@ function Card({ data }) {
                     )}
                 </div>
                 <p className="card__contact">
-                    <span className="card__contact card__contact_color_grey">
+                    <span className="card__contact card__contact--grey">
                         Form:{" "}
                     </span>
                     {data.schedule.id}
                 </p>
                 <p className="card__contact">
-                    <span className="card__contact card__contact_color_grey">
+                    <span className="card__contact card__contact--grey">
                         Company:{" "}
                     </span>
                     {data.employer.name}
                 </p>
                 <p className="card__contact">
-                    <span className="card__contact card__contact_color_grey">
+                    <span className="card__contact card__contact--grey">
                         Web:{" "}
                     </span>
                     {data.alternate_url}
                 </p>
                 <p className="card__contact">
-                    <span className="card__contact card__contact_color_grey">
+                    <span className="card__contact card__contact--grey">
                         Address:{" "}
                     </span>
                     {data?.address !== null ? data?.address.city : "none"}
@@ -46,15 +46,15 @@ function Card({ data }) {
             </div>
 
             <div className="card__description">
-                <p className="card__vacanciesTitle">{data.name}</p>
-                <p className="card__vacanciesText">
+                <p className="card__vacancies-title">{data.name}</p>
+                <p className="card__vacancies-text">
                     {data.snippet.requirement}
                     {data.snippet.requirement}
                     {data.snippet.requirement}
                     {data.snippet.requirement}
                     {data.snippet.requirement}
                 </p>
-                <p className="card__vacanciesText">
+                <p className="card__vacancies-text">
                     {data.snippet.responsibility}
                     {data.snippet.responsibility}
                     {data.snippet.responsibility}
@@ -62,8 +62,8 @@ function Card({ data }) {
                     {data.snippet.responsibility}
                 </p>
                 <button
-                    className={`card__addButton ${
-                        open && "card__addButton_opened"
+                    className={`card__add-button ${
+                        open && "card__add-button--opened"
                     }`}
                     onClick={moreDetailsHandler}
                 >

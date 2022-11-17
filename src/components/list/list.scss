@@ -1,4 +1,5 @@
 $width-mob: 768px;
+$gutter-step: 4px;
 
 .list {
     &__label {
@@ -35,7 +36,7 @@ $width-mob: 768px;
         appearance: none;
         background: url(./../../img/svg/triangle.svg) no-repeat right;
 
-        &_color_grey {
+        &--grey {
             color: var(--grey-color);
         }
 
@@ -58,7 +59,7 @@ $width-mob: 768px;
         }
     }
 
-    &__inputField {
+    &__input-field {
         border: none;
         border-bottom: 1px solid #000;
         font-family: var(--font-basic);
@@ -75,7 +76,7 @@ $width-mob: 768px;
         }
     }
 
-    &__clearButton {
+    &__clear-button {
         padding: 0;
         margin-bottom: $gutter-step * 2;
         margin-left: auto;
@@ -102,11 +103,11 @@ $width-mob: 768px;
         }
     }
 
-    &__closeIcon {
+    &__close-icon {
         margin-left: $gutter-step * 3;
     }
 
-    &__vacanciesList {
+    &__vacancies-list {
         list-style-type: none;
         padding: 0;
         margin: 0 0 $gutter-step * 5 0;
@@ -120,7 +121,7 @@ $width-mob: 768px;
         }
     }
 
-    &__showMoreButton {
+    &__show-more-button {
         margin: 0;
     }
 }
