@@ -1,0 +1,127 @@
+$width-mob: 768px;
+$gutter-step: 4px;
+
+.list {
+    &__label {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    &__fildset {
+        display: flex;
+        margin-bottom: $gutter-step * 8;
+        padding: $gutter-step * 1 0 $gutter-step * 2 0;
+        @media screen and (max-width: $width-mob) {
+            flex-direction: column;
+            gap: $gutter-step * 4;
+            padding-bottom: 0;
+        }
+    }
+
+    &__select {
+        border: none;
+        border-bottom: 1px solid black;
+        font-family: var(--font-basic);
+        height: $gutter-step * 9;
+        margin-top: $gutter-step;
+        outline: none;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        appearance: none;
+        background: url(./../../img/svg/triangle.svg) no-repeat right;
+
+        &--grey {
+            color: var(--grey-color);
+        }
+
+        @media screen and (max-width: $width-mob) {
+            margin-top: 0;
+        }
+    }
+
+    &__select option {
+        color: #000;
+    }
+
+    &__unit {
+        display: flex;
+        width: 38.96%;
+        flex-direction: column;
+        margin-right: $gutter-step * 5;
+        @media screen and (max-width: $width-mob) {
+            width: 100%;
+        }
+    }
+
+    &__input-field {
+        border: none;
+        border-bottom: 1px solid #000;
+        font-family: var(--font-basic);
+        height: $gutter-step * 9;
+        outline: none;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        &::placeholder {
+            color: var(--grey-color);
+        }
+    }
+
+    &__clear-button {
+        padding: 0;
+        margin-bottom: $gutter-step * 2;
+        margin-left: auto;
+        align-self: flex-end;
+        border: none;
+        background-color: #fff;
+        color: var(--grey-color);
+        font-family: var(--font-basic);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: right;
+
+        &:hover {
+            color: #47494b;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: $width-mob) {
+            margin: 0;
+            align-self: flex-start;
+            margin-top: $gutter-step;
+        }
+    }
+
+    &__close-icon {
+        margin-left: $gutter-step * 3;
+    }
+
+    &__vacancies-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 $gutter-step * 5 0;
+        display: flex;
+        flex-direction: column;
+        gap: $gutter-step * 6;
+
+        @media screen and (max-width: $width-mob) {
+            margin-bottom: $gutter-step * 2;
+            gap: $gutter-step * 5;
+        }
+    }
+
+    &__show-more-button {
+        margin: 0;
+    }
+}

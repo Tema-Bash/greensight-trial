@@ -1,0 +1,26 @@
+$gutter-step: 4px;
+
+.button {
+    width: 100%;
+    max-width: $gutter-step * 56;
+    max-height: $gutter-step * 12;
+    background-color: #000;
+    box-sizing: border-box;
+    padding: 0;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__text {
+        margin: $gutter-step * 3 0 $gutter-step * 3;
+        font-family: var(--font-basic);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #fff;
+    }
+}

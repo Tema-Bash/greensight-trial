@@ -1,20 +1,18 @@
 .button {
   width: 100%;
-  max-width: 226px;
+  max-width: 224px;
   max-height: 48px;
   background-color: #000;
   box-sizing: border-box;
   padding: 0;
   border: none;
 }
-
 .button:hover {
   cursor: pointer;
 }
-
-.text {
-  margin: 11px 0 11px;
-  font-family: Rubik;
+.button__text {
+  margin: 12px 0 12px;
+  font-family: var(--font-basic);
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;

@@ -1,0 +1,135 @@
+.card {
+  display: flex;
+  gap: 20px;
+  border: 1px solid black;
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+}
+.card--hidden {
+  overflow-y: hidden;
+  max-height: 332px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .card--hidden {
+    max-height: 728px;
+  }
+}
+.card--logo-container {
+  width: 100%;
+  max-width: 444px;
+  height: 124px;
+  margin-bottom: 28px;
+}
+@media screen and (max-width: 768px) {
+  .card--logo-container {
+    max-width: 232px;
+    height: 80px;
+    margin-bottom: 16px;
+  }
+}
+.card__logo {
+  max-width: 100%;
+  max-height: 96px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.card__contacts {
+  width: 38%;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 768px) {
+  .card__contacts {
+    width: 100%;
+  }
+}
+.card__contact {
+  max-width: 440px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.card__contact--grey {
+  color: #545454;
+}
+.card__contact:not(:last-of-type) {
+  margin: 0 0 16px 0;
+}
+.card__description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 28px;
+}
+.card__vacancies-title {
+  margin: 0;
+  font-family: var(--font-inform);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .card__vacancies-title {
+    font-size: 22px;
+    line-height: 35px;
+  }
+}
+.card__vacancies-text {
+  font-family: var(--font-inform);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0;
+  word-wrap: break-word;
+}
+.card__add-button {
+  font-family: var(--font-inform);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+  position: absolute;
+  padding-top: 28px;
+  border: none;
+  background-color: #fff;
+  bottom: -20px;
+  right: 0%;
+  width: 100%;
+  height: 80px;
+  color: var(--grey-color);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) -59.32%, #ffffff 42.84%);
+}
+@media screen and (max-width: 768px) {
+  .card__add-button {
+    top: 372px;
+  }
+}
+.card__add-button--opened {
+  background: none;
+}
+@media screen and (max-width: 768px) {
+  .card__add-button--opened {
+    top: auto;
+    bottom: -20px;
+  }
+}
+.card__add-button:hover {
+  color: #47494b;
+  cursor: pointer;
+}

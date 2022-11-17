@@ -1,0 +1,155 @@
+$width-mob: 768px;
+$gutter-step: 4px;
+
+.feedback {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $gutter-step * 41;
+        @media screen and (max-width: $width-mob) {
+            flex-direction: column;
+            margin-bottom: $gutter-step * 24;
+        }
+    }
+
+    &__title {
+        margin: $gutter-step * 5 0 0;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 76px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        @media screen and (max-width: $width-mob) {
+            font-size: 32px;
+            line-height: 38px;
+            margin-top: $gutter-step * 2;
+        }
+    }
+
+    &__request-form {
+        width: 100%;
+    }
+
+    &__form {
+        margin-right: $gutter-step * 5;
+        margin-top: $gutter-step * 18;
+        display: flex;
+        flex-direction: column;
+        gap: $gutter-step * 8;
+        max-width: $gutter-step * 109;
+
+        @media screen and (max-width: $width-mob) {
+            margin-top: $gutter-step * 8;
+            margin-right: 0;
+        }
+    }
+
+    &__unit {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    &__input-field {
+        border: none;
+        padding: 0;
+        border-bottom: 1px solid #000;
+        height: $gutter-step * 9;
+        outline: none;
+        font-family: var(--font-basic);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        &::placeholder {
+            color: var(--grey-color);
+        }
+    }
+
+    &__submit-button {
+        margin: $gutter-step * 8 0 $gutter-step * 11;
+
+        @media screen and (max-width: $width-mob) {
+            margin-top: $gutter-step * 9;
+        }
+    }
+
+    &__agreement-text {
+        margin: 0;
+        max-width: $gutter-step * 97;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    &__underline {
+        text-decoration: none;
+        border-bottom: 1px dashed #444;
+        color: #444;
+    }
+
+    &__contacts {
+        width: 100%;
+        max-width: $gutter-step * 113;
+        margin-right: $gutter-step * 3;
+        margin-top: $gutter-step * 19;
+        display: flex;
+        flex-direction: column;
+        gap: $gutter-step * 20;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        @media screen and (max-width: $width-mob) {
+            margin-top: $gutter-step * 8;
+            gap: $gutter-step * 9;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        max-width: $gutter-step * 80;
+
+        &--bold {
+            font-size: 32px;
+            line-height: 24px;
+
+            @media screen and (max-width: $width-mob) {
+                font-size: 22px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    &__greensight-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: $gutter-step * 7;
+
+        @media screen and (max-width: $width-mob) {
+            gap: $gutter-step * 5;
+        }
+    }
+
+    &__greensight-address {
+        font-size: 16px;
+
+        @media screen and (max-width: $width-mob) {
+            margin-top: $gutter-step * 3;
+        }
+    }
+}
